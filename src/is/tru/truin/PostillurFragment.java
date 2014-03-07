@@ -1,6 +1,6 @@
 package is.tru.truin;
 
-
+// rss feed
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
