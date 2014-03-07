@@ -32,7 +32,7 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
 	@Override
 	public void onClick(View v) {
 		//Hér verður emailið sent!
-		//sækja textann, vista senda í maili
+		//sækja textann, vista senda í maili lol
 		
 		String baenin = Fyrirbaen.getText().toString();
 		
