@@ -75,7 +75,7 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
 	private Message createMessage(String email, String subject, String baenin, Session session) throws MessagingException, UnsupportedEncodingException {
 		Message message = new MimeMessage(session);
 		message.setFrom(new InternetAddress(username, "Appid"));
-		message.addRecipient(Message.RecipientType.TO, new InternetAddress(username, username));
+		message.addRecipient(Message.RecipientType.TO, new InternetAddress(email, email));
 		message.setSubject(subject);
 		message.setText(baenin);
 		return message;
@@ -103,14 +103,14 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
 		protected void onPreExecute(){
 			super.onPreExecute();
 			CharSequence bidid = "Vinsamlega bíðið";
-			CharSequence sendi = "Sendi fyrirbænarefni"; //ATHATHATH
-			//pDialog = ProgressDialog.show(MainActivity.this, bidid, sendi, true, false);
+			CharSequence sendi = "Sendi fyrirbænarefni"; 
+			pDialog = ProgressDialog.show(getActivity(), bidid, sendi, true, false);
 		}
 		
 		@Override
 		protected void onPostExecute(Void aVoid){
 			super.onPostExecute(aVoid);
-			//pDialog.dismiss();
+			pDialog.dismiss();
 		}
 		
 		@Override
