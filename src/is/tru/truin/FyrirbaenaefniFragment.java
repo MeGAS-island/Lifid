@@ -32,7 +32,7 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
 	Button sendafyrirbaenButton;
 	TextView Fyrirbaen;
 	private static final String username ="truinoglifid@gmail.com";
-	private static final String password ="truin12345";
+	private static final String password ="12345truin";
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -93,7 +93,6 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
 				return new PasswordAuthentication(username, password);
 			}
 		});
-		
 	}
 	
 	private class SendMailTask extends AsyncTask<Message, Void, Void> {
