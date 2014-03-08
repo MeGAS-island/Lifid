@@ -30,7 +30,7 @@ import android.widget.TextView;
 public class FyrirbaenaefniFragment extends Fragment implements OnClickListener {
 	
 	Button sendafyrirbaenButton;
-	TextView Fyrirbaen;
+	EditText Fyrirbaen;
 	private static final String username ="truinoglifid@gmail.com";
 	private static final String password ="12345truin";
 	
@@ -40,7 +40,7 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
  
         View rootView = inflater.inflate(R.layout.fragment_fyrirbaenaefni, container, false);
         
-        Fyrirbaen = (TextView) rootView.findViewById(R.id.fyrirbaen);
+        Fyrirbaen = (EditText) rootView.findViewById(R.id.fyrirbaenin);
         
         Button sendafyrirbaenButton = (Button) rootView.findViewById(R.id.sendafyrirbaenButton);
         sendafyrirbaenButton.setOnClickListener(this);     
@@ -50,9 +50,6 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
 
 	@Override
 	public void onClick(View v) {
-		//Hér verður emailið sent!
-		//sækja textann, vista senda í maili
-		
 		String baenin = Fyrirbaen.getText().toString();
 		sendMail(username, "Fyrirbæn", baenin);
 	}
@@ -61,8 +58,8 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
 		Session session = createSessionObject();
 		
 		try {
-				Message message = createMessage(email, subject, baenin, session);
-				new SendMailTask().execute(message);
+			Message message = createMessage(email, subject, baenin, session);
+			new SendMailTask().execute(message);
 		} catch (AddressException e){
 			e.printStackTrace();
 		} catch (MessagingException e){
@@ -120,8 +117,6 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
 				e.printStackTrace();
 			}
 			return null;
-		}
-		
+		}	
 	}
-
 }
