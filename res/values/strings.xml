@@ -13,11 +13,10 @@
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
         <item>Bænastund</item>
+        <item>Pistlar og Postillur</item>
+        <item>Fyrirbænaefni</item>
+        <item>Myndir</item>
         <item>Almanak</item>
-        <item>Nýtt efni</item>
-        <item>Bænir</item>
-        <item>Postillur</item>
-        <item>Sálmar</item>
     </string-array>
     
     <!-- Nav Drawer List Item Icons -->
@@ -28,7 +27,6 @@
         <item>@drawable/ic_photos</item>
         <item>@drawable/ic_communities</item>
         <item>@drawable/ic_pages</item>
-        <item>@drawable/ic_whats_hot</item>
     </array>
     
     <!-- Content Description -->
