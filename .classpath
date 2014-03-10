@@ -5,8 +5,8 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Owner/Downloads/additionnal.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Owner/Downloads/activation.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Owner/Downloads/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Owner/Dropbox/Skoli/HI/6.misseri/Hugbunadarverkefni2/Eclipse/Truin/libs/additionnal.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Owner/Dropbox/Skoli/HI/6.misseri/Hugbunadarverkefni2/Eclipse/Truin/libs/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Owner/Dropbox/Skoli/HI/6.misseri/Hugbunadarverkefni2/Eclipse/Truin/libs/mail.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
