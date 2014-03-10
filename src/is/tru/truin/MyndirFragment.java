@@ -7,15 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class SalmarFragment extends Fragment {
+public class MyndirFragment extends Fragment {
 	
-	public SalmarFragment(){}
-		
+	public MyndirFragment(){}
+	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
  
-        View rootView = inflater.inflate(R.layout.fragment_salmar, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_nyttefni, container, false);
          
         return rootView;
     }

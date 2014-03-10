@@ -52,13 +52,13 @@ public class MainActivity extends Activity {
 
 		// Bænastund
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
-		// Almanak
+		// Pistlar og postillur
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
-		// Nýtt efni
+		// Fyribænaefni
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
-		// Bænir
+		// Myndir
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
-		// Postillur
+		// Almanak
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
 		
 		navMenuIcons.recycle();
@@ -139,16 +139,13 @@ public class MainActivity extends Activity {
 			fragment = new AlmanakFragment();
 			break;
 		case 2:
-			fragment = new NyttEfniFragment();
+			fragment = new MyndirFragment();
 			break;
 		case 3:
 			fragment = new BaenirFragment();
 			break;
 		case 4:
 			fragment = new PostillurFragment();
-			break;
-		case 5:
-			fragment = new SalmarFragment();
 			break;
 		case 6:
 			fragment = new BaenastundKyrrdFragment();
