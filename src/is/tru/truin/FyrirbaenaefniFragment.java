@@ -51,7 +51,7 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
 	@Override
 	public void onClick(View v) {
 		String baenin = Fyrirbaen.getText().toString();
-		sendMail(username, "Fyrirbæn", baenin);
+		sendMail("gudnylara7@gmail.com", "FyrirbÃ¦n", baenin);
 	}
 	
 	private void sendMail(String email, String subject, String baenin) {
@@ -98,8 +98,8 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
 		@Override
 		protected void onPreExecute(){
 			super.onPreExecute();
-			CharSequence bidid = "Vinsamlega bíðið";
-			CharSequence sendi = "Sendi fyrirbænarefni"; 
+			CharSequence bidid = "Vinsamlega bÃ­Ã°iÃ°";
+			CharSequence sendi = "Sendi fyrirbÃ¦narefni"; 
 			pDialog = ProgressDialog.show(getActivity(), bidid, sendi, true, false);
 		}
 		
