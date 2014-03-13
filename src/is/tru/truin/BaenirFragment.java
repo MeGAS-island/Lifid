@@ -1,6 +1,5 @@
 package is.tru.truin;
 
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -36,7 +35,5 @@ public class BaenirFragment extends Fragment implements OnClickListener {
         transaction.addToBackStack(null);
 
         transaction.commit(); 
-
-		
 	}
 }
