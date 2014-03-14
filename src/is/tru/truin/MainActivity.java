@@ -6,11 +6,17 @@ import is.tru.model.NavDrawerItem;
 
 import java.util.ArrayList;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -22,6 +28,13 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
+	JSONParser jParser = new JSONParser();
+	JSONArray photos = null;
+	private static String url = "http://blikar.is/app/photosJSON.php";
+	static final String TAG_INSTAGRAM = "instagram";
+	static final String TAG_PHOTO= "photo";
+	
+	
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
@@ -37,6 +50,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		new LoadInstagramPhotos().execute();
 
 		mTitle = mDrawerTitle = getTitle();
 
@@ -184,6 +199,28 @@ public class MainActivity extends Activity {
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
 		mDrawerToggle.onConfigurationChanged(newConfig);
+	}
+	
+	class LoadInstagramPhotos extends AsyncTask<String, String, String> {
+		
+		@SuppressLint("NewApi")
+		protected String doInBackground(String... args) {
+			JSONObject json = jParser.getJSONFromUrl(url);
+	
+			try {
+				photos = json.getJSONArray(TAG_INSTAGRAM);
+				
+				for(int i = 0; i < photos.length(); i++){
+					JSONObject c = photos.getJSONObject(i);
+					String photo = c.getString(TAG_PHOTO);
+					// Adds each photo to String IMAGES (is.blikar.pictures.Constants.IMAGES)
+					Constants.IMAGES[i] = photo;
+				}
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}	
+		return null;		
+		}				
 	}
 
 }
