@@ -1,4 +1,4 @@
-package is.tru.truin;
+package is.tru.myndir;
 
 public class Constants {
 	static int numbImgs=90;
@@ -9,7 +9,7 @@ public class Constants {
 	}
 	
 	public static class Extra {
-		public static String IMAGES = "is.tru.truin.IMAGES";
-		public static String IMAGE_POSITION = "is.tru.truin.IMAGE_POSITION";
+		public static String IMAGES = "is.tru.myndir.IMAGES";
+		public static String IMAGE_POSITION = "is.tru.myndir.IMAGE_POSITION";
 	}
 }
