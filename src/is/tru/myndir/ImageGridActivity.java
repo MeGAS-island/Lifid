@@ -1,6 +1,8 @@
-package is.tru.truin;
+package is.tru.myndir;
 
-import is.tru.truin.Constants.Extra;
+import is.tru.myndir.Constants.Extra;
+import is.tru.truin.R;
+
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -21,7 +23,7 @@ public class ImageGridActivity extends AbsListViewBaseActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ac_image_grid);
 		Bundle bundle = getIntent().getExtras();
-		imageUrls = bundle.getStringArray(Extra.IMAGES);
+		imageUrls = bundle.getStringArray(null);
 		options = new DisplayImageOptions.Builder()
 			.showImageOnLoading(R.drawable.ic_stub)
 			.showImageForEmptyUri(R.drawable.ic_empty)

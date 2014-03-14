@@ -1,10 +1,11 @@
-package is.tru.truin;
+package is.tru.myndir;
 
 import android.app.Application;
 import android.content.Context;
 import android.os.Build;
 import android.os.StrictMode;
-import is.tru.truin.Constants.Config;
+import is.tru.myndir.Constants.Config;
+
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;

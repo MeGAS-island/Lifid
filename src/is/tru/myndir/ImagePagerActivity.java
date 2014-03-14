@@ -1,6 +1,10 @@
-package is.tru.truin;
+package is.tru.myndir;
 
-import is.tru.truin.Constants.Extra;
+import is.tru.myndir.Constants.Extra;
+import is.tru.truin.R;
+import is.tru.truin.R.drawable;
+import is.tru.truin.R.id;
+import is.tru.truin.R.layout;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Parcelable;

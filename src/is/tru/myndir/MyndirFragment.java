@@ -1,4 +1,4 @@
-package is.tru.truin;
+package is.tru.myndir;
 
 
 import android.app.Fragment;
