@@ -16,6 +16,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/button_001"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_bible_black" />
+        android:src="@drawable/ic_praying" />
 
 </RelativeLayout>

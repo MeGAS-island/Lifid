@@ -24,6 +24,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
 
 public class FyrirbaenaefniFragment extends Fragment implements OnClickListener {
 	
@@ -49,7 +51,7 @@ public class FyrirbaenaefniFragment extends Fragment implements OnClickListener 
 	@Override
 	public void onClick(View v) {
 		String baenin = Fyrirbaen.getText().toString();
-		sendMail("gudnylara7@gmail.com", "Fyrirbæn", baenin);
+		sendMail("mas91@hi.is", "Fyrirbæn", baenin);
 	}
 	
 	private void sendMail(String email, String subject, String baenin) {
